@@ -7,10 +7,19 @@ const loadPageNums = () => {
     const numPages = photos.length / 10;
     for (let i = 1; i <= numPages; i++) {
         const pageNum = document.createElement("div");
-        pageNum.addEventListener('click', () => loadImages(i - 1));
+        pageNum.innerHTML = `${i}`;
+        pageNum.addEventListener('click', () => handleClick(i));
+        pageNum.dataset.pagenum = i;
         if (i === 1) { pageNum.classList.toggle('active'); } // toggles page 1 to be active on first page load OR refresh
         pages.append(pageNum);
     }
+};
+
+const handleClick = (i) => {
+    loadImages(i - 1);
+    const pageNodes = document.querySelector('#pages').childNodes;
+    pageNodes.forEach((child) => child.classList.remove('active'));
+    pageNodes[i - 1].classList.add('active');
 };
 
 // img url format - https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg
@@ -32,6 +41,6 @@ const loadImages = (idx) => {
 };
 
 fetch(url)
-.then( response => response.json())
-.then( data => photos.push(...data.photos.photo))
-.then( () => loadImages(0));
+    .then(response => response.json())
+    .then(data => photos.push(...data.photos.photo))
+    .then(() => loadImages(0));
