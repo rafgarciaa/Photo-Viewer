@@ -1,0 +1,25 @@
+{
+  "name": "photo-viewer",
+  "version": "1.0.0",
+  "description": "Photo Viewer App",
+  "main": "photo_viewer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run open",
+    "open": "concurrently \"http-server -a localhost -p 3000\" \"open http://localhost:3000/\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafgarciaa/Photo-Viewer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafgarciaa/Photo-Viewer/issues"
+  },
+  "homepage": "https://github.com/rafgarciaa/Photo-Viewer#readme",
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "http-server": "^0.11.1"
+  }
+}
