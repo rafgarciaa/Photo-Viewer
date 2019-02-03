@@ -1,5 +1,6 @@
 ## Photo Viewer
 [Live!](https://rafgarciaa.github.io/Photo-Viewer/)
+
 A coding exercise utilizing Flickr API to grab photos and displaying them on a webpage as thumbnails - 10 photos at a time.
 This app is written in VanillaJS.
 
