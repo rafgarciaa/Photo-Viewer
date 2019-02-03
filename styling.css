@@ -1,12 +1,12 @@
 html {
-  height: 100%;
-  overflow: hidden;
+    height: 100%;
+    overflow: hidden;
 }
 
 body {
-  height: 100%;
-  overflow: auto;
-  margin: 0;
+    height: 100%;
+    overflow: auto;
+    margin: 0;
 }
 
 .header {
@@ -27,10 +27,9 @@ body {
 }
 
 #root img:hover {
-  transform: scale(1.2);
-  border-radius: 10px;
-  box-shadow: 0 0 2px 0 black;
-  
+    transform: scale(1.2);
+    border-radius: 10px;
+    box-shadow: 0 0 2px 0 black;
 }
 
 .thumb {
@@ -46,12 +45,13 @@ body {
 
 #pages {
     text-align: center;
-    font-size: 50px;
+    font-size: 35px;
 }
 
 #pages div {
     display: inline-block;
     color: #3d7e9a;
+    margin: 0 5px;
 }
 
 #pages div:hover {
@@ -81,8 +81,13 @@ body {
     transition: all 0.5s ease-out;
 }
 
-.modal.is-active {
+.modal.active {
     display: block;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
 }
 
 .img-modal {

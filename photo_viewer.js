@@ -2,6 +2,7 @@ const root = document.getElementById('root');
 const pages = document.getElementById('pages');
 const modal = document.getElementById('modal');
 const overlay = document.createElement("div");
+const imgInModal = document.createElement("img");
 const photos = [];
 const url = "https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=105ad9e0431961826a0f766cc7104954&gallery_id=66911286-72157692049980335&format=json&nojsoncallback=1";
 
@@ -51,10 +52,18 @@ const handleClick = (i) => {
 };
 
 const showImgInModal = (src) => {
-    const imgInModal = document.querySelector('#img-modal');
     imgInModal.src = src;
-    imgInModal.classList.add('img-modal');
+    imgInModal.classList = 'img-modal active';
+    modal.append(imgInModal);
+    modal.classList.add('active');
     overlay.className = 'overlay';
-    modal.classList.add('is-active');
     document.body.appendChild(overlay);
+
+    overlay.addEventListener('click', () => hideImg());
+    imgInModal.addEventListener('click', () => hideImg());
+};
+
+const hideImg = () => {
+    overlay.classList.add('hidden');
+    imgInModal.classList.add('hidden');
 };
