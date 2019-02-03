@@ -4,6 +4,7 @@ A coding exercise utilizing Flickr API to grab photos and displaying them on a w
 ### Features
 + Images are retrieved from Flickr gallery and stored in an array.
 + Thumbnails are paginated by 10 thumbnails per page.
++ Image title is shown on hover.
 + Upon clicking an image, it will be displayed in a modal.
 
 ### Instructions
