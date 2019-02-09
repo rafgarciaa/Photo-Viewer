@@ -103,3 +103,9 @@ body {
     max-width: 60vw;
     z-index: 1000;
 }
+
+footer {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 40px;
+}
