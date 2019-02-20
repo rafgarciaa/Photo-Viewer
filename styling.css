@@ -109,3 +109,18 @@ footer {
     text-align: center;
     font-size: 40px;
 }
+
+.github:link,
+.github:visited {
+    display: inline-block;
+    color: #888888;
+    padding: 1px 5px;
+    border-radius: 25px;
+    transition: all 0.5s ease-out;
+}
+
+.github:link:hover {
+    font-size: 43px;
+    border-radius: 30px;
+    box-shadow: 0 0 2px 0 black;
+}
